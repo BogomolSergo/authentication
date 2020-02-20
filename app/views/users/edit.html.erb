@@ -1,0 +1,20 @@
+<div class="edit profile">
+  <div class="container">
+    <div class="form">
+
+      <h1>Edit Your Profile</h1>
+      <%= form_for(@user) do |f| %>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, class: 'form-control' %>
+
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: 'form-control' %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.submit "_Save changes_", class: "btn-submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>

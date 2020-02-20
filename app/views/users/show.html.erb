@@ -1,0 +1,20 @@
+<div class="profile">
+  <div class="container">
+    <div class="form">
+
+      <h1>Profile</h1>
+      <% if flash[:success] %>
+        <div class="alert alert-success"><%= flash[:success] %></div>
+      <% end %>
+       <%= form_with model: @user do %>
+        <%= label_tag("First name: #{@user.first_name}") %></p>
+        <%= label_tag("Last name: #{@user.last_name}") %></p>
+        <%= label_tag("Saved @mail: #{@user.email}") %></p>
+      <% end %>
+      <div class="btn-block">
+        <%= link_to 'Back', '/', class: "btn-submit" %>
+        <%= link_to 'Edit', edit_user_path(current_user), class: "btn-submit" %>
+      </div>
+    </div>
+  </div>
+</div>
